@@ -2,11 +2,12 @@
   "name": "nextjs-starter-2021",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "commit": "cz",
+    "dev": "next dev",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "next start"
   },
   "dependencies": {
     "next": "12.0.4",
@@ -18,9 +19,16 @@
     "@commitlint/config-conventional": "15.0.0",
     "@types/node": "16.11.8",
     "@types/react": "17.0.35",
+    "commitizen": "4.2.4",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "7",
     "eslint-config-next": "12.0.4",
     "husky": "7.0.4",
     "typescript": "4.5.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
