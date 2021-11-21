@@ -1,0 +1,8 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "color-no-invalid-hex": true,
+    "string-quotes": "single",
+    "value-list-comma-newline-after": "never-multi-line"
+  }
+}
