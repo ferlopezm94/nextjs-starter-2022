@@ -13,7 +13,8 @@
     "next": "12.0.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "styled-components": "5.3.3"
+    "styled-components": "5.3.3",
+    "twin.macro": "2.8.1"
   },
   "devDependencies": {
     "@commitlint/cli": "15.0.0",
@@ -24,6 +25,7 @@
     "@typescript-eslint/eslint-plugin": "5.4.0",
     "@typescript-eslint/parser": "5.4.0",
     "autoprefixer": "10.4.0",
+    "babel-plugin-macros": "3.1.0",
     "babel-plugin-styled-components": "2.0.0",
     "commitizen": "4.2.4",
     "cz-conventional-changelog": "3.3.0",
@@ -50,5 +52,10 @@
     "*.{ts,tsx}": [
       "eslint"
     ]
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "styled-components"
+    }
   }
 }
