@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import tw, { styled } from 'twin.macro';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 
 const Container = tw.div`py-0 px-8`;
 const Main = tw.main`h-screen flex flex-col justify-center items-center`;
@@ -14,6 +16,15 @@ const Button = styled.button(({ primary }: ButtonProps) => [
   tw`inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white`,
   tw`hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`,
   primary && tw`border-transparent text-white bg-indigo-600 hover:bg-indigo-700`,
+]);
+
+interface FlexContainerProps {
+  direction: 'vertical' | 'horizontal';
+}
+
+const FlexContainer = styled.div(({ direction }: FlexContainerProps) => [
+  tw`flex w-1/6 justify-between my-2`,
+  direction === 'vertical' ? tw`flex-col` : tw`flex-row`,
 ]);
 
 const Home: NextPage = () => {
@@ -30,8 +41,16 @@ const Home: NextPage = () => {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </Title>
 
-        <Button primary>Buy</Button>
-        <Button>Learn more</Button>
+        <FlexContainer direction="horizontal">
+          <Button>Learn more</Button>
+          <Button primary>Buy</Button>
+        </FlexContainer>
+
+        <FlexContainer direction="horizontal">
+          <FontAwesomeIcon icon={faLaptopCode} size="2x" />
+          <FontAwesomeIcon icon={['fab', 'apple']} size="2x" />
+          <FontAwesomeIcon icon="rocket" size="2x" />
+        </FlexContainer>
       </Main>
     </Container>
   );
