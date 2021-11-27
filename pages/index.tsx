@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import tw, { styled } from 'twin.macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
@@ -43,6 +44,7 @@ const Home: NextPage = () => {
 
         <FlexContainer direction='horizontal'>
           <Button>Learn more</Button>
+          <button className='bg-red-300'>Danger</button>
           <Button primary>Buy</Button>
         </FlexContainer>
 
@@ -51,6 +53,8 @@ const Home: NextPage = () => {
           <FontAwesomeIcon icon={['fab', 'apple']} size='2x' />
           <FontAwesomeIcon icon='rocket' size='2x' />
         </FlexContainer>
+
+        <Image src='/images/profile.jpg' height={144} width={144} alt='Your Name' />
       </Main>
     </Container>
   );
