@@ -4,20 +4,11 @@ import Image from 'next/image';
 import tw, { styled } from 'twin.macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { Button } from './../design-system';
 
 const Container = tw.div`py-0 px-8`;
 const Main = tw.main`h-screen flex flex-col justify-center items-center`;
 const Title = tw.h1`text-black font-bold text-lg md:text-2xl`;
-
-interface ButtonProps {
-  primary?: boolean;
-}
-
-const Button = styled.button(({ primary }: ButtonProps) => [
-  tw`inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white`,
-  tw`hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`,
-  primary && tw`border-transparent text-white bg-indigo-600 hover:bg-indigo-700`,
-]);
 
 interface FlexContainerProps {
   direction: 'vertical' | 'horizontal';
@@ -44,7 +35,6 @@ const Home: NextPage = () => {
 
         <FlexContainer direction='horizontal'>
           <Button>Learn more</Button>
-          <button className='bg-red-300'>Danger</button>
           <Button primary>Buy</Button>
         </FlexContainer>
 
