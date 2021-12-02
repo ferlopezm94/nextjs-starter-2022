@@ -1,7 +1,7 @@
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
-import '@fortawesome/fontawesome-svg-core/styles.css';
 
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config, library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faRocket } from '@fortawesome/free-solid-svg-icons';

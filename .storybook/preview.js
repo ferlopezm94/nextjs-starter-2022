@@ -1,11 +1,11 @@
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import * as NextImage from 'next/image';
 
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config, library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faRocket } from '@fortawesome/free-solid-svg-icons';
+import * as NextImage from 'next/image';
 
 // Indicate the Font Awesome core SVG library to not try and insert <style> elements into the <head> of the page
 config.autoAddCss = false;
