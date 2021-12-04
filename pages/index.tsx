@@ -1,13 +1,15 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { MailIcon } from '@heroicons/react/solid';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import tw, { styled } from 'twin.macro';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
-import { Button } from './../design-system';
+
+import { Button, ButtonWithIcon } from './../design-system';
 
 const Container = tw.div`py-0 px-8`;
-const Main = tw.main`h-screen flex flex-col justify-center items-center`;
+const Main = tw.main`h-screen w-full flex flex-col justify-center items-center`;
 const Title = tw.h1`text-black font-bold text-lg md:text-2xl`;
 
 interface FlexContainerProps {
@@ -15,7 +17,7 @@ interface FlexContainerProps {
 }
 
 const FlexContainer = styled.div(({ direction }: FlexContainerProps) => [
-  tw`flex w-1/6 justify-between my-2`,
+  tw`flex w-1/2 justify-between my-2`,
   direction === 'vertical' ? tw`flex-col` : tw`flex-row`,
 ]);
 
@@ -34,8 +36,39 @@ const Home: NextPage = () => {
         </Title>
 
         <FlexContainer direction='horizontal'>
-          <Button>Learn more</Button>
-          <Button primary>Buy</Button>
+          <Button>Buy</Button>
+          <Button variant='secondary'>Buy</Button>
+          <Button variant='primary'>Buy</Button>
+        </FlexContainer>
+
+        <FlexContainer direction='horizontal'>
+          <ButtonWithIcon icon={MailIcon} />
+          <ButtonWithIcon icon={MailIcon} variant='secondary' />
+          <ButtonWithIcon icon={MailIcon} variant='primary' />
+        </FlexContainer>
+
+        <FlexContainer direction='horizontal'>
+          <ButtonWithIcon icon={MailIcon} iconPosition='leading'>
+            Contact
+          </ButtonWithIcon>
+          <ButtonWithIcon icon={MailIcon} iconPosition='leading' variant='secondary'>
+            Contact
+          </ButtonWithIcon>
+          <ButtonWithIcon icon={MailIcon} iconPosition='leading' variant='primary'>
+            Contact
+          </ButtonWithIcon>
+        </FlexContainer>
+
+        <FlexContainer direction='horizontal'>
+          <ButtonWithIcon icon={MailIcon} iconPosition='trailing'>
+            Contact
+          </ButtonWithIcon>
+          <ButtonWithIcon icon={MailIcon} iconPosition='trailing' variant='secondary'>
+            Contact
+          </ButtonWithIcon>
+          <ButtonWithIcon icon={MailIcon} iconPosition='trailing' variant='primary'>
+            Contact
+          </ButtonWithIcon>
         </FlexContainer>
 
         <FlexContainer direction='horizontal'>

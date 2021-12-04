@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   purge: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -6,10 +8,17 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: colors.orange,
+      },
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: ['disabled'],
+      cursor: ['disabled'],
+    },
   },
   plugins: [],
 };
