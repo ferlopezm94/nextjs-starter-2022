@@ -1,5 +1,6 @@
 {
-  "name": "nextjs-starter-2021",
+  "name": "nextjs-starter-2022",
+  "description": "Run Next.js applications with typescript, tailwindcss, and semantic release support.",
   "version": "1.0.1",
   "private": true,
   "scripts": {
