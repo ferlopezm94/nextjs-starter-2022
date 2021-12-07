@@ -10,6 +10,7 @@ A Next.js starter that includes support for:
 - [tailwindcss](https://tailwindcss.com): a utility-first, highly customizable CSS framework for rapidly building custom designs.
 - [styled-components](https://styled-components.com): use the best bits of ES6 and CSS to style your apps without stress.
 - [twin.macro](https://github.com/ben-rogerson/twin.macro): blends the magic of Tailwind with the flexibility of css-in-js (emotion, styled-components, stitches and goober) at build time.
+- [storybook](https://storybook.js.org): an open source tool for building UI components and pages in isolation.
 - [font-awesome](https://fontawesome.com): the web's most popular icon set and toolkit to get vector icons and social logos on your website.
 - [eslint](https://github.com/eslint/eslint): statically analyzes your code to quickly find problems.
 - [prettier](https://github.com/prettier/prettier): an opinionated code formatter that enforces a consistent style by parsing your code.
